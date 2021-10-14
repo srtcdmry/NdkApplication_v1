@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         // Example of a call to a native method
-        TextView tv = binding.sampleText;
-        tv.setText(stringFromJNI());
         TextView strNdk = binding.stringNdk;
         strNdk.setText(stringNdk());
     }
@@ -34,6 +32,5 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'ndkapplication_v1' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
     public native String stringNdk();
 }
